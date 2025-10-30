@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.cdnfonts.com/css/romeo" rel="stylesheet">
+</head>
+<body>
+  <h1>ROCK PAPER SCISSOR</h1>
+
+  <div id="mydiv">
+    <label for="username">UserName:</label>
+    <input type="text" id="username" placeholder="Enter your Name" required />
+
+    <br><br>
+
+    <label for="rounds">Best Of:</label>
+    <select id="rounds">
+      <option value="3">3 Rounds</option>
+      <option value="5">5 Rounds</option>
+      <option value="7">7 Rounds</option>
+    </select>
+
+    <br><br>
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <script>
+    document.getElementById("startBtn").addEventListener("click", () => {
+      const username = document.getElementById("username").value.trim();
+      const rounds = document.getElementById("rounds").value;
+
+      if (!username) {
+        alert("Please enter your username!");
+        return;
+      }
+
+      // Store user data for next page
+      localStorage.setItem("username", username);
+      localStorage.setItem("rounds", rounds);
+
+      window.location.href = "rockers.html";
+    });
+  </script>
+</body>
+</html>

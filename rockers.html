@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="rockers.css" />
+  <link href="https://fonts.cdnfonts.com/css/romeo" rel="stylesheet">
+</head>
+<body>
+  <h1>ROCK PAPER SCISSORS</h1>
+
+  <div class="choices">
+    <div class="choice" id="rock">
+      <img src="images/rock.png" alt="Rock" />
+      <p>Rock</p>
+    </div>
+    <div class="choice" id="paper">
+      <img src="images/paper.png" alt="Paper" />
+      <p>Paper</p>
+    </div>
+    <div class="choice" id="scissor">
+      <img src="images/scissors.png" alt="Scissor" />
+      <p>Scissor</p>
+    </div>
+  </div>
+
+  <div class="score-board">
+    <div class="score">
+      <p id="user-score">0</p>
+      <p id="user-label">You</p>
+    </div>
+    <div class="score">
+      <p id="comp-score">0</p>
+      <p>Comp</p>
+    </div>
+  </div>
+
+  <div class="msg-container">
+    <p id="msg">Play your move</p>
+  </div>
+  <br>
+
+  <button id="play-again-btn" style="display:none;">Play Again</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
